@@ -3,6 +3,7 @@ FROM ubuntu:18.04
 RUN apt-get update
 
 RUN apt-get install -y -q --no-install-recommends \
+        apt-utils \
         python3-dev \
         python3-pip \
         python3-setuptools \
@@ -16,7 +17,7 @@ RUN apt-get install -y wget
 
 # opencv deps
 RUN apt-get install -y -q --no-install-recommends \
-    ilibgtk2.0-dev \
+    libgtk2.0-dev \
     pkg-config \
     libavcodec-dev \
     libavformat-dev \
