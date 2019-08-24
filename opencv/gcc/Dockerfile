@@ -43,4 +43,8 @@ RUN cd \
     && cd \
     && rm 3.2.0.zip
 
+# add thelocal libs to the paths
+RUN ldconfig
+ENV PATH="/usr/local/lib64:${PATH}"
+
 CMD ["/bin/bash"]
