@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
 RUN apt-get update
 
@@ -27,8 +27,6 @@ RUN apt-get install -y -q --no-install-recommends \
     libjpeg-dev \
     libpng-dev \
     libtiff-dev \
-    libjasper-dev \
-    libdc1394-22-dev \
     unzip
 
 # build OpenCV 3.2
