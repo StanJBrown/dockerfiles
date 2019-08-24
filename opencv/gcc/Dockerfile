@@ -17,6 +17,7 @@ RUN apt-get install -y wget
 
 # opencv deps
 RUN apt-get install -y -q --no-install-recommends \
+    cmake \
     libgtk2.0-dev \
     pkg-config \
     libavcodec-dev \
@@ -37,7 +38,7 @@ RUN cd \
     && mkdir build \
     && cd build \
     && cmake .. \
-    && make -j8 \
+    && make -j2 \
     && make install \
     && cd \
     && rm 3.2.0.zip
